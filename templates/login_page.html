@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+        <title>Login Page</title>
+        <style>
+            body {
+                margin: 0;
+                height: 100vh;
+                background-color: #f4f4ea;
+                color: #0F1415;
+                font-family: Arial, sans-serif;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 3rem;
+                font-weight: 700;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                background-image: linear-gradient(45deg, #f39c12, #ff6f61, #3498db, #9b59b6);
+                -webkit-background-clip: text;
+                color: transparent;
+                position: relative;
+                margin-bottom: 30px;
+            }
+            
+            h1::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #f39c12;
+                bottom: -5px;
+                left: 0;
+                animation: underline-animation 1s ease-out;
+            }
+            
+            @keyframes underline-animation {
+                0% { width: 0; }
+                100% { width: 100%; }
+            }
+            
+            .custom-input {
+                background-color: #f4f4ea;
+                color: #0F1415;
+                border: 1px solid #0F1415;
+                font-size: 1.1em;
+                padding: 15px;
+                border-radius: 4px;
+                transition: all 0.3s ease;
+                margin: 0.5rem;
+            }
+            
+            .custom-input:focus {
+                border-color: #f39c12;
+                outline: none;
+                box-shadow: 0 0 10px rgba(243, 156, 18, 0.4);
+            }
+            
+            .custom-btn {
+                background-color: transparent;
+                color: #0F1415;
+                border: 1px solid #0F1415;
+                padding: 10px 20px;
+                font-size: 1.2em;
+                cursor: pointer;
+                border-radius: 4px;
+                margin-top: 20px;
+                transition: all 0.3s ease;
+            }
+            
+            .custom-btn:hover {
+                background-color: #f39c12;
+                color: white;
+                box-shadow: 0 0 15px rgba(243, 156, 18, 0.6);
+                transform: scale(1.05);
+            }
+            
+            .navbar-inverse {
+                background-color: transparent;
+                border-color: transparent;
+            }
+            
+            .navbar-brand {
+                color: #0F1415;
+                font-size: 1.5em;
+            }
+            
+            .alert-warning {
+                margin-top: 10px;  /* Space between password input and error message */
+                font-size: 1.1em;
+                color: #d9534f;
+                background-color: #f8d7da;
+                border: 1px solid #f5c6cb;
+                padding: 10px;
+                border-radius: 4px;
+            }
+            
+            .alert-warning {
+                display: none;
+            }
+            
+            form .alert-warning {
+                display: block;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome Back</h1>  <!-- This is your title, styled with the gradient -->
+            <div class="row">
+                <form action="https://gensgcsd03team01.pythonanywhere.com/login" method="POST">
+                  <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input class="form-control custom-input" id="username" name="username" placeholder="Enter your username">
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control custom-input" id="password" name="password" placeholder="Enter your password">
+                  </div>
+
+                  <!-- Display error message only if there is an error -->
+                  {% if error %}
+                    <div class="alert alert-warning" role="alert" id="error-message">
+                        Incorrect username or password.
+                    </div>
+                  {% endif %}
+
+                  <button type="submit" class="btn custom-btn">Log in</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+<head>
+    <title>Resume by Lan</title>
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1579783901586-d88db74b4fe4?q=80&w=3896&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: 186.6%;
+            background-position: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 115vh; /* Full viewport height */    
+            z-index: -1; /* Send background behind content */    
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3 {
+            margin-left: 49px;
+            margin-right: 49px;
+            font-weight: regular;
+        }
+        p {
+            margin-left: 50px;
+            margin-right: 54.54px;
+            font-size: 1.5em;
+            line-height: 27.2px;
+        }
+
+        a {
+            color: #007bff; /* Change this to your preferred link color */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+    .line-height-underline {
+        text-decoration: underline;
+        text-underline-thickness: 4px; /* Adjust the thickness here */
+        text-decoration-color: white; /* Change underline color */
+        line-height: 1.17; /* Increase line height to add space */
+    }
+
+        .normal {
+            letter-spacing: normal; /* Default spacing */
+        }
+
+        .tight {
+            letter-spacing: -0.25px; /* Tighter spacing */
+        }
+
+        .wide {
+            letter-spacing: 0.5px; /* Wider spacing */
+        }
+
+        .no-copy {
+            user-select: none; /* Prevent text selection */
+        }
+        .fixed-bg {
+            background-image: url('https://images.unsplash.com/photo-1574182245530-967d9b3831af?q=80&w=3874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: 160%;
+            background-position: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; /* Ensure full viewport height */
+            height: 115vh; /* Full viewport height */
+            position: fixed; /* Fixed position for the background */
+            width: 100%; /* Full width */
+            z-index: -1; /* Send background behind content */
+            transition: filter 0.2s; /* Smooth transition for blur effect */
+            animation: expand 75s infinite, moveDown 40s infinite;
+        }
+
+        @keyframes expand {
+            0% {
+                background-size: 145%; /* Initial size */
+            }
+            35% {
+                background-size: 200%; /* Slightly larger at halfway point */
+            }
+            100% {
+                background-size: 280%; /* Enlarged */
+            }
+
+        }
+
+        @keyframes moveDown {
+            0% {
+                background-size: 140%; /* Initial size */
+                transform: translateY(0); /* No vertical movement */
+            }
+            35% {
+                background-size: 190%; /* Slightly larger at halfway point */
+                transform: translateY(600px); /* Move down slightly */
+            }
+            100% {
+                background-size: 280%; /* Larger */
+                transform: translateY(600px); /* Move down more */
+            }
+        }
+
+        .content {
+            position: relative;
+            padding: 0px;
+            z-index: 1; /* Place above the fixed background */
+        }
+        .solid-bg {
+            background-color: #f6f5e8; /* Solid color for the content */
+            padding: 5.59px 0px; /* Spacing for the solid color */
+            margin: 0; /* Remove default margin */
+        }
+                .scroll-link {
+            color: black; /* Link color */
+            cursor: pointer; /* Cursor change on hover */
+            text-decoration: underline; /* Underline the link */
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        }
+        </style>
+</head>
+<body>
+  <div class="fixed-bg" id="parallax-bg"></div>
+   <div class="content">
+    <div class="solid-bg">
+    <p style="line-height: 1.9964555;">&nbsp;</p>
+    <span style="margin-left: 49px; margin-right: 49px; font-family: 'Gill Sans', 'Verdana'; font-size: 5.063em; text-align: left; line-height: 40.8px; font-weight: normal; letter-spacing: 1.4626px">Lan Lan</span>
+    <h2 style="font-size: 3.375em; text-align: left; line-height: 43px; font-weight: normal; letter-spacing: 0.145px">Cloud Support & DevOps</h2>
+    <p>313B <span class="no-copy" style="text-decoration: line-through; text-decoration-thickness: 31px; color: black;">Sumang Link 14-131</span></p>
+    <p>Singapore<span  class="no-copy"; style="text-decoration: line-through; text-decoration-thickness: 31px; color: black;">&nbsp;822313&nbsp;</span></p>
+    <p><a href="https://wa.me/6588748388" target="_blank">(65) 8874 8388</a></p>
+    <p><a href="mailto:llanlan91@gmail.com">llanlan91@gmail.com</a></p>
+    <p><a href="https://www.linkedin.com/in/llan?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>&nbsp; | &nbsp;<a href="https://">Portfolio</a></p>
+    <p style="line-height: 2.79491;">&nbsp;</p>
+    <p style="font-size: 0.444em; font-style: italic; letter-spacing: 0.2px;">Created <span id="creationDate"></span> as part of the Cloud Resume Challenge, this page has attracted <span id="visitorCount">0</span> visitors.</p>
+    <p style="line-height: 0.03;">&nbsp;</p>
+    </div>
+</div>
+<div style="text-align: center;">
+    <img src="https://images.unsplash.com/photo-1579783901467-31b604eac7a8?q=80&w=3922&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Europeana Image" style="display: block; margin: 0 auto; width: 100%; max-height: 678.4px; object-fit: cover; opacity: 0">
+</div>
+</div>
+<div class="solid-bg">
+    <h3 style="margin-top: 38px; font-size: 5.063em; font-weight: bold; line-height: 1.2; letter-spacing: 0.9516px; margin-left: 49px;">Professional Summary</h3>
+    <p style="margin-top: 280.55565904px; line-height: 1.6; letter-spacing: 0.5px;">Dynamic professional transitioning into tech with extensive experience in project management and client engagement. Proven ability to drive efficiency and innovation, with a <span class="tight">keen</span> eye for problem-solving and strategic&nbsp;solutions.</p>
+
+
+    <p style="line-height: 4.122;">&nbsp</p>
+    <h3 style="font-size: 44px; letter-spacing: 0.211px;">Education & Relevant Course</h3>
+    <p style="line-height: 0.6;">&nbsp</p>
+    <p style="font-weight: bold; letter-spacing: 0.07105px;">Cloud Support and DevOps</p>
+    <p>Temasek Polytechnic, in partnership <span style="line-height: 1.3;">with Generation Singapore</span></p>
+    <p style="font-style: italic;">2024&mdash;2025</p>
+  
+    <p style="line-height: 0.1;">&nbsp</p>
+    <p style="font-weight: bold; letter-spacing: 0.07105px;">BFA (Honours) Fine Art</p>
+    <p>University College London, Slade <span style="line-height: 1.3;">Sc<span class="tight">hool</span> of Art, United Kingdom</span></p>
+    <p style="font-style: italic;">2013&mdash;2016</p>
+
+    <p style="line-height: 2.354325;">&nbsp</p>
+    <h3 style="font-size: 44px; letter-spacing: 0.07510900501px;">Technical Skills</h3>
+    <p style="line-height: 0.81;">&nbsp</p>
+    <p style="line-height: 1.2011;"><strong>Cloud Platforms</strong>: AWS, Azure</p>
+    <p style="line-height: 1.2011;"><strong>DevOps Tools</strong>: Docker, Kubernetes, Jenkins, Ansible</p>
+    <p style="line-height: 1.2011;"><strong>Infrastructure as Code</strong>: Terraform, CloudFormation</p>
+    <p style="line-height: 1.2011;"><strong>Scripting Languages</strong>: Python, Bash</p>
+    <p style="line-height: 1.2011;"><strong>Version Control</strong>: Git, GitHub</p>
+    <p style="line-height: 1.2011;"><strong>CI/CD Pipelines</strong>: Configuration, Automation, and Management</p>
+    <p style="line-height: 1.2011;"><strong>Monitoring Tools</strong>: Prometheus, Grafana</p>
+    <p style="line-height: 1.2011;"><strong>Operating Systems</strong>: Linux, Windows</p>
+    <p style="line-height: 1.26011;"><strong>Design and Software</strong>: <span style="line-height: 1.2;">UI, Branding, Commercial Design, HTML, Photoshop, Illustrator, InDesign, After Effects, and AutoCAD; skilled in combining aesthetics with functionality in digital and print media.</span></p>
+
+    <p style="line-height: 2.9;">&nbsp</p>
+    <h3 style="font-size: 44px; letter-spacing: 0.206px;">Professional Experience</h3>
+    <p style="line-height: 0.81;">&nbsp</p>
+    <p style="font-weight: bold; letter-spacing: 0.071px;">Self-employed Private Art Teacher</p>
+    <p style="line-height: 0.706;">&nbsp</p>    
+    <p>A STUDIO BY ANNE, 2020&mdash;2024</p>
+    <p style="margin-top: 2.3px; letter-spacing: 0.14px; line-height: 1.17"><i>Developed and delivered tailored programmes for diverse learners, <span class="wide">utilising</span> feedback to enhance <span class="line-height-underline">client satisfaction</span> and <span class="line-height-underline">retention</span>.</i></p>
+    <p style="line-height: 1.1; font-weight: bold; margin-top: 60px; letter-spacing: 0.057px;">Key Achievements</p>
+    <p style="line-height: 0.31;">&nbsp</p> 
+   <ul style="margin-left: 50px">    
+    <li><p style="letter-spacing: 0.1px; line-height: 1.17">Supported students with autism in building portfolios for university acceptance by creating tailored project strategies and timelines, focusing on <span class="line-height-underline">efficient execution</span> and <span class="line-height-underline">impactful outcomes.</span></p></li>
+    <li><p style="margin-bottom: 163px; letter-spacing: 0.1px; line-height: 1.17">Doubled client base through word of mouth and targeted outreach with low marketing spend and effort.</p></li>
+   </ul>
+   </div>
+<div style="text-align: center;">
+    <img src="https://images.unsplash.com/photo-1579783901467-31b604eac7a8?q=80&w=3922&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Europeana Image" style="display: block; margin: 0 auto; width: 100%; max-height: 999.89px; object-fit: cover; opacity: 0">
+</div>
+<div class="solid-bg">
+    <p style="line-height: 0.0378899;">&nbsp</p>
+    <p style="font-weight: bold; letter-spacing: 0.3px;">Interior Designer</p>
+    <p style="line-height: 1.21;">&nbsp</p>
+    <p>Mink Design, 2019&mdash;2021</p>
+    <p style="margin-top: 2.41px; letter-spacing: 0.16px; line-height: 1.17"><i>Led design projects from concept to completion, employing 2d and 3d software to create detailed visualisations and plans, enhancing efficiency and <span class="line-height-underline">reducing client revisions by 40%</span>.</i></p>
+    <p style="margin-top: 2.4044px; letter-spacing: 0.166px; line-height: 1.17"><i>Effectively coordinated with diverse stakeholders and managed multiple timelines with different moving parts, ensured <span class="line-height-underline">high-quality project delivery on schedule</span>.</i></p>
+    <p style="line-height: 1.1; letter-spacing: -0.1px; font-weight: bold; margin-top: 64.5px">Key Achievement</p>
+    <p style="line-height: 0.31;">&nbsp</p> 
+   <ul style="margin-left: 50px">    
+    <li><p style="margin-bottom: 183px; letter-spacing: 0.11px; line-height: 1.178">Successfully <span class="line-height-underline">navigated pandemic-related supply chain disruptions</span> by sourcing alternative contractors and negotiating cost-saving agreements with contractors who were unable to fulfil projects due to movement restrictions, ensuring <span class="line-height-underline">project timelines</span> were met and <span class="line-height-underline">costs</span> were managed effectively.</p></li>
+   </ul>
+   </div>
+<div style="text-align: center;">
+    <img src="https://images.unsplash.com/photo-1579783901467-31b604eac7a8?q=80&w=3922&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Europeana Image" style="display: block; margin: 0 auto; width: 100%; max-height: 999.4px; object-fit: cover; opacity: 0">
+</div>
+<div class="solid-bg">
+    <p style="line-height: 0.037889909;">&nbsp</p>
+    <p style="font-weight: bold; letter-spacing: 0.11px">Studio Manager and Lead Art Instructor</p>
+    <p style="line-height: 1.16;">&nbsp</p>    
+    <p>Sasha & Lulu Atelier, 2017&mdash;2019</p>
+    <p style="margin-top: 2.412px; letter-spacing: 0.16px; line-height: 1.17"><i>Implemented new systems that optimise processes, boosting <span class="line-height-underline">overall productivity</span> and <span class="line-height-underline">organisational flow</span>.</i></p>
+    <p style="margin-top: 2.4px; letter-spacing: 0.16px; line-height: 1.17"><i>Oversaw daily operations and coordinated instructional team to <span class="wide">ensure seamless programme delivery and enhanced participant engagement.</span></i></p>
+    <p style="margin-top: 2.4px; letter-spacing: 0.166px; line-height: 1.17"><i>Led successful marketing efforts to enhance customer engagement and sales, leveraging technology tools to streamline processes and improve <span class="line-height-underline">outreach effectiveness</span>.</i></p>
+    <p style="line-height: 1.1; letter-spacing: -0.1px; font-weight: bold; margin-top: 64.5px">Key Achievements</p>
+    <p style="line-height: 0.31;">&nbsp</p> 
+   <ul style="margin-left: 50px">    
+    <li><p style="letter-spacing: 0.11px; line-height: 1.178">Analysed and restructured programme offerings and pricing models, resulting in a 50% revenue increase and a 60% growth in user engagement within one year.</p></li>
+    <li><p style="letter-spacing: 0.1px; line-height: 1.17">Rolled out <span class="line-height-underline">user acquisition strategies</span>, including increased paid trial pricing and offerings that can be credited toward long-term class sign-ups and repurposing of existing programs to attract new clientele and significantly boosted engagement and conversion rates, resulting in a 70% increase in new sign-ups.</p></li>
+    <li><p style="margin-bottom: 183px; letter-spacing: 0.1px; line-height: 1.17">Expanded digital marketing efforts led to the facilitation of workshops for government bodies, including a team from the Prime Minister's Office, <span class="line-height-underline">strengthening client relationships</span> and resulting in a 90% increase in external client engagement.</p></li>
+   </ul>
+   </div>
+<div style="text-align: center;">
+    <img src="https://images.unsplash.com/photo-1579783901467-31b604eac7a8?q=80&w=3922&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Europeana Image" style="display: block; margin: 0 auto; width: 100%; max-height: 999.4px; object-fit: cover; opacity: 0">
+</div>
+<div class="solid-bg">
+    <p style="line-height: 0.02779;">&nbsp</p>
+    <p style="font-weight: bold; letter-spacing: 0.5px">Art Educator</p>
+    <p style="line-height: 0.95;">&nbsp</p>   
+    <p>Artgrain Studio, 2010&mdash;2012</p>
+    <p style="margin-top: 2.41px; letter-spacing: 0.16px; line-height: 1.17"><i>Facilitated structured lessons for children to adults, enhancing engagement through preset and new curriculum.</i></p>
+    <p style="margin-top: 2.4px; letter-spacing: 0.166px; line-height: 1.17"><i>Design and implemented effective programme delivery through collaboration with the educational team, ensuring <span class="line-height-underline">quality standards</span> and <span class="line-height-underline">optimising learning outcomes</span>.</i></p>
+    <p style="line-height: 1.1; letter-spacing: -0.1px; font-weight: bold; margin-top: 64.5px">Key Achievements</p>
+    <p style="line-height: 0.31;">&nbsp</p> 
+   <ul style="margin-left: 50px">    
+    <li><p style="letter-spacing: 0.11px; line-height: 1.178">Played a key role in the rapid growth in its startup years by helping to lay down its <span class="line-height-underline">foundation</span> and <span class="line-height-underline">refining programmes</span> through trial and error based on customer feedback and internal reviews, thus improving the quality of classes, resulted in the studio breaking even within six months of launch.</p></li>
+    <li><p style="letter-spacing: 0.1px; line-height: 1.17">Developed and optimised engaging art programmes that attracted over 150 new students, resulting in a 200% increase in studio enrolment by <span class="line-height-underline">driving growth</span> and <span class="line-height-underline">scaling services</span> through strategic programme design and implementation.</p></li>
+    <li><p style="margin-bottom: 180.9px; letter-spacing: 0.1px; line-height: 1.17">Created marketing initiatives that increased studio revenue by 30% and expanded brand visibility, using data-driven insights by tracking customer demographics to improve engagement and conversion.</p></li>
+   </ul>
+   </div>
+<div style="text-align: center;">
+    <img src="https://images.unsplash.com/photo-1579783901467-31b604eac7a8?q=80&w=3922&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Europeana Image" style="display: block; margin: 0 auto; width: 100%; max-height: 5078.4px; object-fit: cover; opacity: 0">
+</div>
+<div class="solid-bg">
+    <p style="line-height: 0.008;">&nbsp</p>
+    <h3 style="font-size: 44px;">Projects</h3>
+    <p style="margin-top: 20.41px; font-weight: bold;">Cloud Support Ticketing System</p>
+    <p style="line-height: 1.17">Developed and deployed a cloud-based ticketing system using AWS services, improving issue tracking and resolution times by 40%.</p>
+    <p style="line-height: 0.1;">&nbsp</p>    
+    <p style="font-weight: bold;">DevOps Pipeline Implementation</p>
+    <p style="line-height: 1.17">Designed and implemented a CI/CD pipeline using Jenkins and Docker, reducing deployment errors by 60% and streamlining the deployment process.</p>
+
+    <p style="line-height: 2.649;">&nbsp</p>
+    <h3 style="font-size: 44px;">Certifications and Awards</h3>
+    <p><strong>AWS Certified</strong>&nbsp;Cloud Practitioner</p>
+    <p><strong>Microsoft Certified</strong>&nbsp;Azure Fundamentals</p>
+    <p><strong>Interior Design Institute</strong>&nbsp;Diploma <span style="line-height: 1.2;">of Interior Design</span></p>
+    <p><strong>UOB Painting of the Year 2010</strong>&nbsp;Platinum<span style="line-height: 1.2;"> Award (Runner-up), Open Category</span></p>
+
+    <p style="line-height: 2.9;">&nbsp</p>
+    <h3 style="font-size: 44px; letter-spacing: 0.003504982395px;">Professional Development</h3>
+    <p style="margin-top: 96px; letter-spacing: 0.066305px; line-height: 1.17"><strong>Continuous Learning</strong><span style="line-height: 1.14;">&nbsp;Regularly participates in online courses and workshops to stay updated with the latest trends and technologies in cloud computing.</span></p>
+    <p style="line-height: 0.475;">&nbsp</p>
+    <p style="letter-spacing: 0.066305px; line-height: 1.17"><strong>Community Engagement</strong><span style="line-height: 1.14;">&nbsp;Active member of various cloud computing and DevOps communities, contributing to discussions and knowledge sharing.</span></p>
+
+    <p style="line-height: 2.89209;">&nbsp</p>
+    <h3 style="font-size: 44px; letter-spacing: 0.1px;">References</h3>
+    <p style="letter-spacing: 0.1px;">Available upon request.</p>
+    <p style="line-height: 7.956;">&nbsp</p>
+    <p style="text-align: right; letter-spacing: 0.1px;"><i><a href="#top" id="back-to-top" style="color: black"><u>Back to the top</u></a>&nbsp; </i>|&nbsp;
+    <i><a href="https://wa.me/6588748388" class="allow-interaction" target="_blank" style="color: black"><u>Contact me</u></a></i></p>
+    <p style="line-height: 1.036px;">&nbsp</p>
+   </div>
+<div style="text-align: center;">
+    <img src="https://images.unsplash.com/photo-1579783901467-31b604eac7a8?q=80&w=3922&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Europeana Image" style="display: block; margin: 0 auto; width: 100%; max-height: 617.49px; object-fit: cover; opacity: 0">
+</div>
+</div>
+    <script>
+        // Prevent right-click context menu and copy/paste for protected sections
+        document.querySelectorAll('.no-copy').forEach(element => {
+            element.addEventListener('contextmenu', (e) => {
+                e.preventDefault(); // Prevent right-click menu
+            });
+
+            element.addEventListener('copy', (e) => {
+                e.preventDefault(); // Prevent copy action
+            });
+
+            element.addEventListener('paste', (e) => {
+                e.preventDefault(); // Prevent paste action
+            });
+
+            element.addEventListener('cut', (e) => {
+                e.preventDefault(); // Prevent cut action
+            });
+        });
+
+
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            const parallaxBg = document.getElementById('parallax-bg');
+            // Change the background position to create a parallax effect
+            parallaxBg.style.backgroundPosition = `center ${scrollPosition * 0.5}px`;
+        });
+
+$('a[href=\\#top]').click(function(){
+  $('body').animate(
+    {
+      scrollTop: 0
+    }, 
+    90000
+  );
+});
+
+window.addEventListener('DOMContentLoaded', (e) => {
+    getVisitorCount();
+})
+const myApiLink = {https://resumebylan.azurewebsites.net};
+const getVisitorCount =() => {
+    let count = 0;
+fetch(myApiLink , {
+    mode: 'cors'
+}).then(response => {
+    return response.json() }
+).then(res => {
+const count = res;
+document.getElementById('visitorCount').innerHTML = count;
+})
+return count;
+}
+
+window.addEventListener('DOMContentLoaded', (e) => {
+    getVisitorCount();
+})
+
+const getVisitorCount =() => {
+    let count = 0;
+fetch(myApiLink , {
+    mode: 'cors'
+}).then(response => {
+    return response.json() }
+).then(res => {
+const count = res;
+document.getElementById('visitorCount').innerHTML = count;
+})
+return count;
+}
+
+    // Set the creation date (YYYY, MM - 1, DD)
+    const creationDate = new Date(2024, 9, 19); // October is month 9 (0-indexed)
+    
+    // Get the current date
+    const currentDate = new Date();
+
+    // Calculate the difference in milliseconds
+    const differenceInTime = currentDate - creationDate;
+
+    // Convert the difference from milliseconds to days
+    const differenceInDays = Math.floor(differenceInTime / (1000 * 3600 * 24));
+
+    // Update the HTML to display how many days ago it was created
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('creationDate').innerText = `Created ${differenceInDays} days ago.`;
+    });
+
+
+    // Set the creation date (YYYY, MM - 1, DD)
+    const creationDate = new Date(2024, 9, 19); // October is month 9 (0-indexed)
+    
+    // Get the current date
+    const currentDate = new Date();
+
+    // Calculate the difference in milliseconds
+    const differenceInTime = currentDate - creationDate;
+
+    // Convert the difference from milliseconds to days
+    const differenceInDays = Math.floor(differenceInTime / (1000 * 3600 * 24));
+
+    // Update the HTML to display how many days ago it was created
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('creationDate').innerText = `Created ${differenceInDays} days ago.`;
+    });
+
+    </script>
+</body>
+</html>

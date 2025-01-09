@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Shuo Wang - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #00bcd4, #8e44ad);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      text-align: center;
+      overflow-x: hidden; /* Prevent horizontal overflow */
+    }
+    .container {
+      width: 100%;
+      max-width: 900px;
+      background-color: #fff;
+      padding: 30px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      color: #333;
+      position: relative;
+      z-index: 1;
+      box-sizing: border-box;
+    }
+    h1 {
+      font-size: 36px;
+      color: #007bff;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    h3 {
+      font-size: 20px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 24px;
+      color: #007bff;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+    .section-title {
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #007bff;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+    .section-item {
+      margin-bottom: 20px;
+    }
+    .contact-info {
+      list-style-type: none;
+      padding: 0;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    .contact-info li {
+      margin-bottom: 10px;
+    }
+    .contact-info li span {
+      font-weight: bold;
+      color: #007bff;
+    }
+    .skills-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .skills-list li {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      margin: 5px 10px;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    .experience-list, .education-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      text-align: left; /* Align to the left */
+    }
+    .experience-item, .education-item {
+      margin-bottom: 20px;
+    }
+    .experience-item .job-title {
+      font-weight: bold;
+      color: #007bff;
+      font-size: 20px;
+    }
+    .experience-item p,
+    .education-item p {
+      color: #555;
+      font-size: 16px;
+    }
+    .experience-item ul, .education-item ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    .education-item .degree {
+      font-weight: bold;
+      font-size: 18px;
+      color: #007bff;
+    }
+
+    /* Animation for section titles */
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .section-title {
+      animation: slideIn 1s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Shuo Wang</h1>
+      <h3>Ex - Software Developer at ST Engineering | Ex - Software Developer at IBM</h3>
+      <ul class="contact-info">
+        <li><span>Location:</span> Singapore</li>
+      </ul>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">Summary</h2>
+      <p>I'm a skilled software engineer with expertise in developing cloud-based applications, automation, and team leadership. I have hands-on experience with technologies like Angular, Node.js, Java, Python, and OpenShift, and I'm passionate about optimizing system performance and streamlining workflows. I lead teams effectively, fostering collaboration and clear communication, while also focusing on delivering high-quality, scalable solutions. With a strong focus on continuous improvement, I thrive on solving complex technical challenges and implementing automation to reduce manual effort and enhance efficiency.</p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Experience</h2>
+      <ul class="experience-list">
+        <li class="experience-item">
+          <p class="job-title">SCTP Cloud Support & DevOps Practitioner</p>
+          <p>Generation Singapore</p>
+          <p>November 2024 - Present (2 months)</p>
+        </li>
+        <li class="experience-item">
+          <p class="job-title">Senior Software Developer</p>
+          <p>TG Singapore/ST Engineering</p>
+          <p>June 2024 - November 2024 (6 months)</p>
+          <ul>
+            <li>Identified and fixed MQTT connection problems in a React-based application, improving system reliability and communication efficiency.</li>
+            <li>Created Locust load testing scripts to simulate high traffic and ensure the system met performance and scalability requirements.</li>
+            <li>Successfully completed two sprints focused on new feature development using ag-Grid in a React project.</li>
+            <li>Developed automation tests using pytest-bdd and Selenium, enhancing test coverage and reducing manual testing efforts.</li>
+            <li>Wrote scripts to automate Keycloak user management tasks, improving efficiency and reducing administrative overhead.</li>
+          </ul>
+        </li>
+        <li class="experience-item">
+          <p class="job-title">Application Developer</p>
+          <p>IBM</p>
+          <p>September 2019 - April 2024 (4 years 8 months)</p>
+          <ul>
+            <li>Lead a team of developers in the design and implementation of a cloud-based web application using OpenShift.</li>
+            <li>Facilitated daily Scrum meetings, ensuring alignment with Sprint goals and fostering open communication among team members.</li>
+            <li>Collaborated with Citizen Developers and stakeholders to prioritize backlog items and define Sprint goals.</li>
+            <li>Developed and maintained ongoing/existing web applications using Angular, Node.js, Java, Python, ensuring compliance with coding standards and best practices.</li>
+            <li>Designed and implemented automation scripts using Python and Selenium WebDriver to automate repetitive tasks and streamline workflow processes.</li>
+            <li>Deployed containerized applications to OpenShift cloud platform as services, leveraging Kubernetes for container orchestration and management.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Skills</h2>
+      <ul class="skills-list">
+        <li>Angular</li>
+        <li>Node.js</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>OpenShift</li>
+        <li>Kubernetes</li>
+        <li>Automation</li>
+        <li>React</li>
+        <li>Selenium</li>
+        <li>Git</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <ul class="education-list">
+        <li class="education-item">
+          <p class="degree">Postgraduate Diploma, System Analysis</p>
+          <p>National University of Singapore (2019 - 2020)</p>
+        </li>
+        <li class="education-item">
+          <p class="degree">Master of Engineering (MEng), Chemical Engineering</p>
+          <p>Queen's University Belfast (2010 - 2013)</p>
+        </li>
+        <li class="education-item">
+          <p class="degree">Diploma, Chemical Engineering</p>
+          <p>Singapore Polytechnic (2007 - 2010)</p>
+        </li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

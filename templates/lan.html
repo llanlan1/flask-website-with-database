@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-GB" prefix="og: https://ogp.me/ns#" itemscope itemtype="https://schema.org/Article">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Portfolio by Lan</title>
+<style>
+
+    .header {
+        margin-right: 0px;
+    }
+
+    .mobile-width{
+        margin-right: 0px;
+    }
+
+    .header a {
+        text-decoration: none;
+        position: relative;
+        margin: 0px;
+        height: 100vh;
+        color: #0F1415;
+        font-family: Arial, sans-serif;
+    }
+
+    .header a:hover {
+        font-weight: bold;
+    }
+    
+
+    .footer-links a {
+        text-decoration: none;
+        position: relative;
+        margin: 20px;
+        height: 100vh;
+        color: #0F1415;
+        font-family: Arial, sans-serif;
+    }
+
+    .footer-links a:hover::after {
+        font-weight: 600;
+        text-decoration: none;
+    }
+    
+
+    body {
+        margin: 0px;
+        padding-left: 0px;
+        color: #0F1415;
+        height: 0vh;
+        font-family: Arial, sans-serif;
+        background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(245, 245, 245, 1) 50%, rgba(255, 255, 255, 1) 100%);
+        animation: moveGradient 30s infinite linear;
+    }
+    
+    /* Keyframe animation for smooth gradient circle movement */
+    @keyframes moveGradient {
+        0% {
+            background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(245, 245, 245, 1) 50%, rgba(255, 255, 255, 1) 100%);
+        }
+        25% {
+            background: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(255, 255, 255, 1) 100%);
+        }
+        50% {
+            background: radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(255, 255, 255, 1) 100%);
+        }
+        75% {
+            background: radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(255, 255, 255, 1) 100%);
+        }
+        100% {
+            background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(245, 245, 245, 1) 50%, rgba(255, 255, 255, 1) 100%);
+        }
+    }
+    
+
+    h1{
+        font-size: 1.4em;
+    }
+
+    h3{
+        font-size: 1.305em;
+    }
+
+    p {
+        font-size: 0.92em;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: regular;
+        font-size: 0.9em;
+        position: relative;
+        margin: 20px;
+        height: 100vh;
+        color: #929292;
+        font-family: Arial, sans-serif;
+    }
+
+
+    /* Hover effect */
+    a:hover::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -16px;
+        font-weight: 600;
+        height: 11px;
+        width: 0;
+    }
+
+
+    .nav a {
+        text-decoration: none;
+        position: relative;
+        margin: 20px;
+        height: 100vh;
+        color: #0F1415;
+        font-family: Arial, sans-serif;
+    }
+
+    .nav a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -16px;
+        font-weight: 600;
+        height: 11px;
+        text-decoration: none !important; /* Ensure no underline on hover */
+        width: 0;
+        background-color: currentColor; /* Matches the text color */
+    }
+
+    /* Hover effect */
+    .nav a:hover::after {
+        width: 100%;
+    }
+
+    .nav a[href^="#"]:target::after {
+        width: 100%;
+    }
+
+    .nav a[href^="mailto:"]:hover::after, a[href^="mailto:"]:active::after {
+        width: 100%; /* Ensure the email link also gets the full underline on hover/active */
+
+    }
+    
+    .leftnav {
+        float: left; /* Left-aligned section inside the top navigation */
+        margin-left: -20px;
+        margin-right: -20px;
+        font-size: 1em;
+
+      }
+
+    .rightnav {
+        float: right; /* Right-aligned section inside the top navigation */
+        margin-left: -20px;
+        margin-right: 20px;
+        font-size: 0.9em;
+        vertical-align: top;
+
+      }
+
+    .view-portfolio a {
+        text-decoration: none;
+        position: relative;
+        margin-top: 20px;
+    }
+    
+    .view-portfolio:hover::after a {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px; /* 5px distance from the text */
+        width: 100%;
+        height: 10px; /* Thickness of the underline */
+        background-color: currentColor; /* Matches the text color */
+    }
+
+    /* Solid border */
+    hr.solid {
+        border-top: 1px solid #0F1415;
+    }
+
+    .container {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        text-align: left;
+        z-index: 1000; /* Ensure it stays on top */
+        background: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 1) 0%, rgb(251, 251, 251) 50%, rgba(255, 255, 255, 1) 100%);
+        animation: moveGradient 30s infinite linear;
+    }
+    
+    /* Keyframe animation for smooth gradient circle movement */
+    @keyframes moveGradient {
+        0% {
+            background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(245, 245, 245, 1) 50%, rgba(255, 255, 255, 1) 100%);
+        }
+        25% {
+            background: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(255, 255, 255, 1) 100%);
+        }
+        50% {
+            background: radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(255, 255, 255, 1) 100%);
+        }
+        75% {
+            background: radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 240, 1) 50%, rgba(255, 255, 255, 1) 100%);
+        }
+        100% {
+            background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(245, 245, 245, 1) 50%, rgba(255, 255, 255, 1) 100%);
+        }
+    }
+        
+        
+        
+    
+    .coming-soon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute; /* or fixed, depending on whether you want it to scroll with the page */
+        top: -2;
+        left: 20;
+        width: auto; /* Adjust the width if necessary */
+      }
+      
+      .coming-soon {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #333;
+        opacity: 0; /* Start with text invisible */
+        animation: fadeIn 3s forwards, slideUp 3s forwards; /* Apply the animation */
+      }
+      
+      /* Fade-in animation */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      
+      /* Slide-up animation */
+      @keyframes slideUp {
+        0% {
+          transform: translateY(30px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .narrow-text-header {
+        width: 100%;
+        font-size: 1rem;
+    }  
+
+      .narrow-text {
+        width: 60%;
+      }
+
+      .mobile-text {
+        font-size: 1rem; /* Default size */
+      }
+
+      .mobile-text2 {
+        font-size: 1rem; /* Default size */
+      }
+
+
+/* For tablet and iPad widths */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .coming-soon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute; /* or fixed, depending on whether you want it to scroll with the page */
+        left: 20;
+        width: auto; /* Adjust the width if necessary */
+    }
+
+    .coming-soon {
+        font-size: 3.6rem; /* 1.2 times larger than normal */
+        font-weight: bold;
+        color: #333;
+        opacity: 0; /* Start with text invisible */
+        animation: fadeIn 3s forwards, slideUp 3s forwards;
+    }
+
+    .header a {
+        text-decoration: none;
+        position: relative;
+        margin-right: 0px;
+        height: 100vh;
+        color: #0F1415;
+        font-family: Arial, sans-serif;
+        font-size: 1.2em; /* Increase font size */
+    }
+
+    .header {
+        margin-right: 12px; /* Slightly larger margin */
+    }
+
+    .mobile-width {
+        margin-right: 12px; /* Slightly larger margin */
+    }
+
+    .leftnav {
+        float: left;
+        margin-left: -24px; /* Scale margin */
+        margin-right: -24px;
+        font-size: 1.14em; /* 1.2 times the original font size */
+    }
+
+    .rightnav {
+        float: right;
+        margin-left: -24px;
+        margin-right: 24px;
+        font-size: 1.044em; /* Scale font size */
+        vertical-align: top;
+    }
+
+    .narrow-text-header {
+        width: 120%; /* Wider */
+        font-size: 1.344rem; /* Scaled font size */
+    }
+
+    .narrow-text {
+        width: 72%; /* Adjust for 1.2x scale */
+    }
+
+    .mobile-text {
+        font-size: 1.44rem; /* Larger size for tablet */
+    }
+
+    .mobile-text2 {
+        font-size: 1.26rem; /* Slightly larger */
+    }
+}
+
+
+      @media (max-width: 480px) {
+
+        .coming-soon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute; /* or fixed, depending on whether you want it to scroll with the page */
+            left: 20;
+            width: auto; /* Adjust the width if necessary */
+          }
+          
+          .coming-soon {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #333;
+            opacity: 0; /* Start with text invisible */
+            animation: fadeIn 3s forwards, slideUp 3s forwards; /* Apply the animation */
+          }
+
+        .header a {
+            text-decoration: none;
+            position: relative;
+            margin-right: 0px;
+            height: 100vh;
+            color: #0F1415;
+            font-family: Arial, sans-serif;
+        }
+    
+        .header a:hover {
+            font-weight: bold;
+        }
+
+        .header {
+            margin-right: 10px;
+        }
+
+        .mobile-width{
+            margin-right: 10px;
+        }
+
+        .leftnav {
+            float: left; /* Left-aligned section inside the top navigation */
+            margin-left: -20px;
+            margin-right: -20px;
+            font-size: 0.95em;
+    
+          }
+    
+        .rightnav {
+            float: right; /* Right-aligned section inside the top navigation */
+            margin-left: -20px;
+            margin-right: 20px;
+            font-size: 0.87em;
+            vertical-align: top;
+    
+          }
+
+        .narrow-text-header {
+            width: 109%;
+            font-size: 1.12rem;
+        }  
+
+        .narrow-text {
+            width: 65%;
+        }
+
+        .mobile-text {
+            font-size: 1.2rem; /* Larger size for mobile */
+        }
+
+        .mobile-text2 {
+            font-size: 1.05rem;
+        }
+        
+      }
+</style>
+
+<section>
+    <div class="container">
+        <div class="header">
+            <div style="margin-left: 20px; margin-right: 19px; margin-top: -5px;"><h1 style="font-size: 1.2rem">N 1 ° 24 ' 21.984 "<span style="font-size: 0.65em; font-weight: 400; float: right; text-align: right; margin-top: -1px"><a href="https://www.linkedin.com/in/llan" target="_blank">LinkedIn</a> &nbsp;&nbsp; <span style="font-size: 1.08em; position: relative; top: 1px;">/</span> &nbsp;&nbsp;&nbsp;<a href="mailto:llanlan91@gmail.com" target="_blank">Email</a></span><br>
+                E 103 ° 54 ' 3.356 "</h1>
+        </div>
+            <p style="font-size: 1.334em; margin-left: 20px; padding-top: 43.5px; line-height: 0.86em">Lan Lan
+            <br><span style="font-size: 0.6em;">Cloud Support & DevOps <span style="font-size: 0.9em; transform: scaleY(2)"><i>Practitioner</i></span></p>
+            
+            <br>
+            <br>
+            <br>
+
+
+
+        <div class="leftnav">
+            <div class="nav" style="margin-left: 20px;">
+                <a href="#portfolio">PORTFOLIO</a>
+            </div>
+        </div>
+        <div class="rightnav">
+            <div class="nav" style="margin-right: -20px">
+                <div class="header">
+                    <a href="#resume">Resumé</a>
+                    <a href="#contact">Connect</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <p style="line-height: 0px;">&nbsp</p>                    
+        <hr class="solid" style="margin-left: 20px">
+
+</section>
+
+
+<section class="mobile-width" style="margin-left: 20px">
+    <div>
+        <p style="line-height: 22em" id="portfolio">&nbsp</p>
+        <div class="coming-soon-container">
+            <h1 class="coming-soon">Portfolio—Coming Soon.<br>Watch this space&nbsp; .&nbsp; __&nbsp; .</h1>
+        </div>
+        <script src="coming-soon-animation.js"></script>
+
+        <p style="line-height: 6.4em" id="resume">&nbsp</p>
+        <p style="line-height: 16.34em">&nbsp</p>
+
+        <h3 style="padding-bottom: 0.9px;">FUNCTIONAL SKILLS</h3>
+            <p><strong>TECHNOLOGY</strong><strong></strong><br />
+            Cloud Infrastructure<br />
+            Azure Management<br />
+            Automation<br />
+            Scripting<br />
+            Linux Administration<br />
+            System Optimisation<br />
+            CI/CD (Continuous Integration<br />
+            and Continuous Deployment)<br />
+            Monitoring<br />
+            Troubleshooting<br />
+            Web Development<br />
+            UI (User-Interface Design)<br />
+            
+            </p>
+            
+            <p><strong>OTHER</strong><strong></strong><br />
+            Leadership<br />
+            Team-Building<br />
+            Project Management<br />
+            Coordination<br />
+            Communication<br />
+            Problem-Solving<br />
+            Critical Thinking<br />
+            Customer Service<br />
+            
+            <br></p>
+            
+            <p><strong>CERTIFICATION</strong><br />
+            Microsoft Azure AZ-900<br />
+            3DS MAX for Architectural Visualisation<br />
+            
+            <br></p>
+            
+            <p><strong>AWARD</strong><br />
+            UOB Painting of the Year, Platinum</p>
+
+    </div>
+</section>
+
+<p style="line-height: 6.25em">&nbsp;</p>
+
+<section class="mobile-width" style="margin-left: 20px">
+        <h3>Work Experience</h3>
+            <div class="narrow-text">
+                <p style="line-height: 0.35">&nbsp;</p> 
+                <div class="narrow-text-header">
+                    <h4>Cloud Support and DevOps Trainee at Generation Singapore Bootcamp, 2024 – 2025</h4>
+                </div>
+                <div class="mobile-text">  
+                    <p style="line-height: 0.25">&nbsp;</p>  
+                    <p style="line-height: 1.2;">In the midst of developing a cloud-based e-commerce system with MySQL backend integration and system prototyping, improving scalability and performance</p>
+                    <p style="line-height: 1.2;">Built and deployed a personal web portfolio with Python Flask</p>
+                    <p style="line-height: 1.2;">Implemented cloud deployment best practices for high availability and responsiveness</p>
+                    <p style="line-height: 1.2;">Utilised Git and GitHub for version control and effective collaboration</p>
+                &nbsp;<a href="#portfolio" class="view-portfolio"><p style="padding-top: 1.45em">&nbsp;<i>View Portfolio&nbsp; [ <span style="font-size: 1.2em; position: relative; top: 2px">* </span>Coming soon ]</i></p></a>
+                </div>
+
+                <p style="line-height: 0.37">&nbsp;</p>    
+                <div class="narrow-text-header">
+                    <h4>Freelance Art Educator and Business Owner of A STUDIO BY ANNE, 2020 – Present</h4>
+                </div>
+                <div class="mobile-text">      
+                    <p style="line-height: 0.25">&nbsp;</p>  
+                    <p style="line-height: 1.2;">Delivered customised in-person and online art programmes, leveraging platforms like Zoom and Google Cloud for efficient learning</p>
+                    <p style="line-height: 1.2;">Streamlined operations with project management tools, improving client interactions</p>
+                    <p style="line-height: 1.2;">Integrated AI tools (DALL·E, MidJourney) to boost student engagement</p>
+                    <p style="line-height: 0.35">&nbsp;</p>
+                </div>
+                <p style="line-height: 0.2">&nbsp;</p> 
+                <div class="narrow-text-header">
+                    <h4>Interior Designer at Mink Design Pte Ltd, 2019 – 2021</h4>
+                </div>
+                <div class="mobile-text">  
+                    <p style="line-height: 0.25">&nbsp;</p>  
+                    <p style="line-height: 1.2;">Managed design projects using AutoCAD, SketchUp and other tools, reducing revision requests by 40%</p>
+                    <p style="line-height: 1.2;">Addressed supply chain disruptions during the pandemic by finding alternative solutions to maintain timelines</p>
+                    <p style="line-height: 1.2;">Utilised G Suite for project management, improving client satisfaction with timely deliveries</p>
+                    <p style="line-height: 0.35">&nbsp;</p>
+                </div>      
+                <p style="line-height: 0.2">&nbsp;</p> 
+                <div class="narrow-text-header">
+                    <h4>Art Educator and Studio Manager at Sasha & Lulu Atelier, 2017 – 2019</h4>
+                </div>
+                <div class="mobile-text">
+                    <p style="line-height: 0.25">&nbsp;</p>  
+                    <p style="line-height: 1.2;">Increased new sign-ups by 70% by revamping marketing strategies</p>
+                    <p style="line-height: 1.2;">Introduced digital tools for enrolment and scheduling, improving operational efficiency</p>
+                    <p style="line-height: 1.2;">Led workshops and collaborated with government bodies like OnePA and the Prime Minister’s Office</p>
+                    <p style="line-height: 0.35">&nbsp;</p>
+                </div>
+                <p style="line-height: 0.1">&nbsp;</p> 
+                <div class="narrow-text-header">    
+                    <h4>Art Educator at Artgrain Studio, 2010 – 2012</h4>
+                </div>  
+                <div class="mobile-text">  
+                    <p style="line-height: 1.2;">Developed engaging art programmes, increasing student enrolment by 200%</p>
+                    <p style="line-height: 1.2;">Implemented digital marketing strategies, resulting in a 30% revenue increase</p>
+                    <p style="line-height: 1.2;">Streamlined internal processes to improve operations and customer satisfaction</p>
+                </div>
+                <p>&nbsp;</p>
+            </div>                        
+</section>
+
+<p style="line-height: 4.25">&nbsp;</p>
+
+<section class="mobile-width" style="margin-left: 20px">
+        <h3 style="padding-bottom: 9.3px">EDUCATION</h3>
+        <p><strong>Cloud Support & DevOps Bootcamp</strong><strong></strong><br />
+        Generation Singapore, Singapore<br />
+        November 2024 — February 2025<br />
+        <br>
+        <p><strong>BFA Honours Programme</strong><strong></strong><br />
+        University College London, United Kingdom<br />
+        September 2013 — June 2016<br />
+        </p>
+</section>
+
+<p style="line-height: 2.191em" id="contact">&nbsp</p>
+
+<!-- Footer -->
+<section class="mobile-width" style="margin-left: 20px">
+    <hr class="solid">
+    <div class="footer-links">  
+        <div>
+            <h3>CONTACT</h3>
+            <div class="mobile-text2"
+            <span style="margin-left: -20px"><a href="mailto:llanlan91@gmail.com">llanlan91@gmail.com</a></span>
+            <a href="https://www.linkedin.com/in/llan">linkedin.com/in/llan</a></p>
+            </div>
+        </div>
+            <p style="line-height: 6.99em">&nbsp</p> 
+    </div>
+</section>
+
+<!-- Copyright -->
+<section class="mobile-width" style="margin-left: 20px">
+    <div>
+        <p style="font-size: 0.25em">Copyright © Lan Lan &nbsp; All Rights Reserved</p>
+        <p style="line-height: 0.1em">&nbsp</p>
+    </div>
+</section>
+
+
+<script>
+
+    window.addEventListener('load', () => {
+        const comingSoon = document.querySelector('.coming-soon');
+        if (comingSoon) {
+          comingSoon.style.animation = 'fadeIn 2.5s forwards, slideUp 2.5s forwards';
+        }
+      });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            const targetElement = document.querySelector(this.getAttribute('href'));
+            if (targetElement) {
+                customScrollTo(targetElement.offsetTop, 2200); // 2.2-second duration
+            }
+        });
+    });
+    
+    function customScrollTo(targetY, duration) {
+        const startY = window.scrollY || window.pageYOffset; // Current scroll position
+        const distance = targetY - startY; // Distance to scroll
+        const startTime = performance.now();
+    
+        // Ease-out quint for a very gradual deceleration
+        function easeOutQuint(t) {
+            return 1 - Math.pow(1 - t, 5);
+        }
+    
+        function step(currentTime) {
+            const elapsedTime = currentTime - startTime;
+            const progress = Math.min(elapsedTime / duration, 1); // Cap progress at 1
+            const easedProgress = easeOutQuint(progress); // Apply easing
+    
+            // Scroll to the new position
+            window.scrollTo(0, startY + distance * easedProgress);
+    
+            if (elapsedTime < duration) {
+                requestAnimationFrame(step); // Continue animation
+            }
+        }
+    
+        requestAnimationFrame(step);
+    }
+    
+    
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Welcome to Our Playground!</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #f4f4ea;
+            cursor: none;
+            color: #0F1415;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        .trail {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: #0F1415;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: fadeOut 3s forwards;
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; transform: scale(0.5); }
+        }
+
+        /* Portfolio links container (top left corner) */
+        .portfolio-links {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #0F1415;
+            font-size: 1.3em; /* Keep portfolio word size same */
+            font-weight: normal; /* Normal weight */
+        }
+
+        .portfolio-links a {
+            display: inline-block; /* Makes the link fit the text length */
+            text-decoration: none;
+            color: #0F1415;
+            margin-bottom: 3px; /* Reduced margin */
+            position: relative;
+            transition: color 0.3s ease;
+            font-size: 3.325rem;
+            text-decoration: none;
+            padding: 10px 16px;
+            margin: 10px;
+            margin-top: -31px;
+            position: relative;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            color: transparent;
+            background-image: linear-gradient(45deg, #f39c12, #ff6f61, #3498db, #9b59b6);
+            -webkit-background-clip: text; /* Apply the same gradient to the text */
+        }
+
+        /* Hover effect */
+        .portfolio-links a:hover {
+            color: #fff; /* Keep text color white */
+            background: none; /* Remove the gradient on hover */
+            box-shadow: 0 0 15px rgba(243, 156, 18, 0.6), 0 0 25px rgba(243, 156, 18, 0.4); /* Glowing effect */
+            transform: scale(1.1) rotate(-5deg);
+            letter-spacing: 2px;
+        }
+
+        /* Underline animation for links */
+        .portfolio-links a::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: #f39c12;
+            bottom: -5px;
+            left: 50%;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        .portfolio-links a:hover::before {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Orbit container */
+        .orbit-container {
+            position: absolute;
+            top: 35%; /* Moved higher to avoid overlapping the comments section */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px; /* Reduced width for smaller orbit */
+            height: 40px; /* Adjusted height for oval shape */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .profile {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #0F1415;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.5em;
+            animation: orbit 60s linear infinite;
+        }
+
+        /* Lan Lan's orbit starts earlier */
+        .profile:nth-child(1) {
+            animation-duration: 57s;
+            animation-delay: -10s; /* Delayed start */
+        }
+
+        /* Wang Shuo's orbit is the fastest and starts later */
+        .profile:nth-child(2) {
+            animation-duration: 40s;
+            animation-delay: -3s; /* Delayed start */
+        }
+
+        /* Zuhairah's orbit has a slight delay */
+        .profile:nth-child(3) {
+            animation-duration: 50s;
+            animation-delay: -6s; /* Delayed start */
+        }
+
+        @keyframes orbit {
+            0% { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+            25% { transform: rotate(90deg) translateX(200px) rotate(-90deg); }
+            50% { transform: rotate(180deg) translateX(200px) rotate(-180deg); }
+            75% { transform: rotate(270deg) translateX(200px) rotate(-270deg); }
+            100% { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+        }
+
+        /* Label and lines for each icon */
+        .label {
+            position: absolute;
+            color: #0F1415;
+            font-size: 0.52em; /* Smaller font size */
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 75px; /* Increased space between name and icon */
+            white-space: nowrap; /* Ensure names stay on the same line */
+        }
+
+        .label-line {
+            position: absolute;
+            width: 0px; /* Thinner line */
+            height: 100px; /* Increased line height for better spacing */
+            background-color: #0F1415;
+            top: -100px; /* Adjust to match the label position */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Styling for the comment section */
+        .container {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            padding: 20px;
+            text-align: left;
+            display: flex;
+        }
+
+        .comment-section {
+            background-color: #f4f4ea;
+            color: #0F1415;
+            padding: 10px;
+            font-size: 0.9em;
+            padding-bottom: 16px;
+            width: 40%;
+        }
+
+        .comment-section-textarea {
+            background-color: #f4f4ea;
+            color: #0F1415;
+            padding: 10px;
+            font-size: 0.9em;
+            padding-bottom: 16px;
+            width: 100%;
+            border: 1px solid black;
+            height: 10rem;
+            overflow-y: scroll;
+        }
+
+        .btn-submit {
+            background-color: transparent;
+            color: #0F1415;
+            border: 1px solid #0F1415;
+            padding: 8px 38px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 0px;
+            margin-top: 0.5rem;
+            position: relative;
+        }
+
+        .btn-submit:hover {
+            background-color: #0F1415;
+            color: white;
+            border: 1px solid #0F1415;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            background-image: linear-gradient(45deg, #f39c12, #ff6f61, #3498db, #9b59b6);
+            -webkit-background-clip: text; /* Clip the gradient to text */
+            color: transparent; /* Make the text color transparent so the gradient shows */
+            position: relative;
+        }
+
+        /* Animated underline for title */
+        h1::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #f39c12;
+            bottom: -5px;
+            left: 0;
+            animation: underline-animation 1s ease-out;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Portfolio Links Section -->
+    <div class="portfolio-links" style="top: -18.75912px">
+        <h1 style="left: 24px; font-size: 1.6689em; padding-bottom: 25px; left: 0px">Portfolio</h1>
+        <a href="https://gensgcsd03team01.pythonanywhere.com/lan" target="_blank">Lan Lan</a>
+        <a href="https://gensgcsd03team01.pythonanywhere.com/wangshuo" target="_blank">Wang Shuo</a>
+        <a href="https://gensgcsd03team01.pythonanywhere.com/zuhairah" target="_blank">Zuhairah</a>
+    </div>
+
+    <!-- Orbit container -->
+    <div class="orbit-container">
+        <!-- Lan Lan -->
+        <div class="profile">
+            <a href="https://www.linkedin.com/in/llan" target="_blank" style="color: white; text-decoration: none;" title="View my LinkedIn!">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <div class="label-line"></div>
+            <div class="label">Lan Lan</div>
+        </div>
+
+        <!-- Wang Shuo -->
+        <div class="profile">
+            <a href="https://www.linkedin.com/in/shuo-wang-17b962a1" target="_blank" style="color: white; text-decoration: none;" title="View my LinkedIn!">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <div class="label-line"></div>
+            <div class="label">Wang Shuo</div>
+        </div>
+
+        <!-- Zuhairah -->
+        <div class="profile">
+            <a href="https://www.linkedin.com/in/zuhairah-a-5a2149104" target="_blank" style="color: white; text-decoration: none;" title="View my LinkedIn!">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <div class="label-line"></div>
+            <div class="label">Zuhairah</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="comment-section">
+            <h3 style="font-size: 1.008em">Welcome to our Playground!</h3>
+            <form action="." method="POST">
+                <div>
+                     <textarea name="contents" style="color: #0F1415; height: 84px; width: 80%" placeholder="Say hi. Leave a comment here."></textarea>
+                </div>
+                <div>
+                     <input type="submit" class="btn-submit" value="POST NOW">
+                </div>
+
+            </form>
+        </div>
+        <div class="comment-section">
+            <h3>Comments: </h3>
+            <div class="comment-section-textarea">
+                {% for comment in comments %}
+                    <div class="row">
+                        {{ comment }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const maxSpheres = 7;
+        const trailElements = [];
+        let lastX = 0;
+        let lastY = 0;
+
+        document.body.addEventListener("mousemove", (e) => {
+            const distance = Math.hypot(e.pageX - lastX, e.pageY - lastY);
+            if (distance >= 32) {
+                lastX = e.pageX;
+                lastY = e.pageY;
+                createTrail(e.pageX, e.pageY);
+            }
+        });
+
+        document.body.addEventListener("touchmove", (e) => {
+            const touch = e.touches[0];
+            const distance = Math.hypot(touch.pageX - lastX, touch.pageY - lastY);
+            if (distance >= 32) {
+                lastX = touch.pageX;
+                lastY = touch.pageY;
+                createTrail(touch.pageX, touch.pageY);
+            }
+        }, { passive: true });
+
+        function createTrail(x, y) {
+            const trail = document.createElement("div");
+            trail.classList.add("trail");
+            trail.style.left = `${x}px`;
+            trail.style.top = `${y}px`;
+
+            document.body.appendChild(trail);
+            trailElements.push(trail);
+
+            if (trailElements.length > maxSpheres) {
+                const oldestTrail = trailElements.shift();
+                oldestTrail.remove();
+            }
+        }
+    </script>
+</body>
+</html>
